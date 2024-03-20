@@ -1,0 +1,210 @@
+.mainpage-contacts.contacts {
+    background: #fff;
+}
+
+.mainpage-contacts .contacts__body {
+    display: block;
+    border: 2px solid $color-add;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.contacts__body {
+    max-width: 97rem;
+    margin: 0 auto;
+    padding: 3rem;
+    @include media-mobile {
+        padding: 1.5rem;
+    }
+}
+
+.mainpage-contacts .contacts__measure {
+    width: 100%;
+}
+
+.mainpage-contacts .contacts__measure-title {
+    margin: 10px 0;
+    @include font ($size: 3.4rem, $height: 1.25, $weight: 700, $style: normal);
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-txt;
+    @include media-tabletbig {
+        @include font ($size: 2.8rem, $height: 1.25, $weight: 700, $style: normal);
+    }
+    @include media-tablet {
+        @include font ($size: 2.4rem, $height: 1.25, $weight: 700, $style: normal);
+    }
+    @include media-mobile {
+        @include font ($size: 2rem, $height: 1.25, $weight: 700, $style: normal);
+    }
+}
+
+.mainpage-contacts .contacts__measure-desc {
+    text-align: center;
+    @include font ($size: 1.6rem, $height: 1.35, $weight: 400, $style: normal);    
+    color: $color-txt;
+    margin-bottom: 2.18rem;
+    @include media-tabletbig {
+        @include font ($size: 1.4rem, $height: 1.2, $weight: 400, $style: normal);
+    }
+}
+
+
+.modal__body {    
+    background: #fff;
+}
+
+.newforma .form__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+    @include media-tabletbig {
+        flex-direction: column;
+    }
+}
+.form__row {
+    margin-bottom: 15px;
+}
+
+.mainpage-contacts .newforma .form_cell2, .mainpage-contacts .newforma .form_cell3 {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: space-between;
+}
+.newforma .form_cell3 {
+    width: 33.3333%;
+    float: left;
+    padding: 0 10px;
+    @include media-tabletbig {
+        width: 100%;
+    }
+}
+
+.mainpage-contacts .newforma .form__label {
+    margin: 0 10px 0 0;
+    padding-bottom: 1rem;
+}
+.form__label {
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 1;
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.input, select, textarea {
+    width: 100%;
+    box-shadow: none;
+    font-size: 13px;
+    height: 36px;
+    line-height: 18px;
+    padding: 9px 12px;
+    background-color: #fff;
+    border-radius: 0;
+    border: 1px solid #b0bfc6;
+    color: #111;
+    font-weight: 500;
+    -webkit-transition: border-color .1s;
+    -moz-transition: border-color .1s;
+    transition: border-color .1s;
+}
+.input, button, input, select, textarea {
+    vertical-align: middle;
+    color: #444;
+}
+
+.mainpage-contacts .newforma .form_cell2, .mainpage-contacts .newforma .form_cell3 {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: space-between;
+}
+.newforma .form_cell2 {
+    width: 50%;
+    //float: left;
+    padding: 0 10px;
+}
+
+.mainpage-contacts .newforma .form__label {
+    margin: 0 10px 0 0;
+}
+.form__label {
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 1;
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.mainpage-contacts .newforma select {
+    //width: 250px;
+}
+
+.newforma .form_cell1 {
+    width: 100%;
+    //float: left;
+    padding: 0 10px;
+}
+
+input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.input, select, textarea {
+    width: 100%;
+    box-shadow: none;
+    font-size: 13px;
+    height: 36px;
+    line-height: 18px;
+    padding: 9px 12px;
+    background-color: #fff;
+    border-radius: 0;
+    border: 1px solid #b0bfc6;
+    color: #111;
+    font-weight: 500;
+    -webkit-transition: border-color .1s;
+    -moz-transition: border-color .1s;
+    transition: border-color .1s;
+}
+
+.mainpage-contacts .newforma .form_cell2, .mainpage-contacts .newforma .form_cell3 {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: space-between;
+}
+.newforma .form_cell2 {
+    width: 50%;
+    //float: left;
+    padding: 0 10px;
+    @include media-tabletbig {
+        width: 100%;
+    }
+}
+
+.mainpage-contacts .newforma .form_cell2.sender_cell {
+    width: 100%;
+}
+.mainpage-contacts .newforma .form_cell2, .mainpage-contacts .newforma .form_cell3 {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: space-between;
+}
+.newforma .form_cell2.sender_cell {
+    padding-top: 25px;
+}
+#pconf {
+    width: 1.5rem;
+}
+
+.btn_expand {
+    display: block;
+    margin: 0 auto;
+}
+

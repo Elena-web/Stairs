@@ -1,0 +1,126 @@
+*,
+*::before,
+*::after {
+    outline: none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+html {
+    height: 100%;
+    font-size: 10px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: $color-white;
+}
+
+input, button {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+button {
+    cursor: pointer;
+    &:hover{
+        @extend %transition;
+    } 
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    &:hover{
+        @extend %transition;
+    } 
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.bg-wrapper {
+    background-image: url('../img/bg-11.jpg');
+    background-position: top left; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-color: #2a2a29;    
+}
+
+.container {
+    padding: 0 50px;
+    margin: 0 auto;
+    max-width: 144rem;
+      @include media-laptop-big {
+        max-width: 120rem;
+      }
+      @include media-laptop {
+        max-width: 102.4rem;
+      }
+      @include media-tabletbig {
+        max-width: 99.1rem;
+      }
+      @include media-tablet {
+        max-width: 76.8rem;
+        padding: 0 3rem;
+      }
+      @include media-mobile-big {
+        max-width: 64.4rem;
+        padding: 0 2rem;
+      }
+      @include media-mobile {
+        max-width: 54rem;
+        padding: 0 2rem;
+      }
+      @include media-mobile-small {
+        max-width: 38rem;
+        padding: 0 1.5rem;
+      }
+}
+
+h1 {    
+    @include font ($size: 5.5rem, $height: 1.2, $weight: 800, $style: normal);    
+    color: $color-white;    
+    text-transform: uppercase;
+    margin: 1.5rem 0 1.5rem;
+    @include media-laptop-big {
+        @include font ($size: 4rem, $height: 1.2, $weight: 800, $style: normal);  
+    }
+    @include media-tabletbig {
+        text-align: center;
+    }
+    @include media-mobile-big {
+        @include font ($size: 3rem, $height: 1.2, $weight: 800, $style: normal);  
+    }
+    @include media-mobile {
+        margin: 1rem 0 1rem;
+        @include font ($size: 2.4rem, $height: 1.2, $weight: 800, $style: normal);  
+    }
+}
+
+h2 {
+    @include font ($size: 2.5rem, $height: 1.5, $weight: 600, $style: normal);    
+    color: $color-white;
+    text-transform: uppercase;
+    margin: 0 0 1.5rem;
+    @include media-mobile-big {
+        text-align: center;
+        @include font ($size: 2rem, $height: 1.2, $weight: 600, $style: normal);    
+    }
+    @include media-mobile {
+        @include font ($size: 1.8rem, $height: 1.2, $weight: 600, $style: normal);
+        margin: 0 0 1rem;
+    }
+}

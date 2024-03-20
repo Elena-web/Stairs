@@ -1,0 +1,91 @@
+#features-new {
+    padding: 5rem 0;
+    background: url('../img/bg-23.jpg') 50% 50% no-repeat;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    @include media-mobile-small {
+        padding: 3rem 0;
+    }
+}
+
+.section {
+    padding: 3.125rem 0;
+}
+
+#features-new h2 {
+    text-align: center;
+    @include font ($size: 3.4rem, $height: 1.25, $weight: 700, $style: normal);
+    @include media-mobile {
+        @include font ($size: 2.2rem, $height: 1.25, $weight: 700, $style: normal);
+    }
+}
+
+.features-new__wrapper {
+    @include media-tabletbig {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    @include media-tablet {
+        width: 80%;
+        margin: 0 auto;
+    }
+    @include media-mobile {
+        width: 100%;
+    }
+}
+
+.features-new__box {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    margin: 2.5rem 1%;
+    text-align: left;
+    @include media-laptop-big {
+        margin: 1.5rem 1%;
+    }
+    @include media-laptop {
+        width: 45%;
+    }
+    @include media-tabletbig {
+        width: 48%;
+    }
+    @include media-tablet {
+        width: 100%;
+    }
+    @include media-mobile-small {
+        margin: 0.8rem 1%;
+    }
+}
+
+.features-new__box.hidden {
+    @include media-mobile-big {
+        display: none;
+    }
+}
+
+.features-new__box-ico {
+    float: left;
+    margin: 0 15px 0 0;
+}
+
+.features-new__box-ico svg {
+    @include media-mobile-big {
+        width: 6.5rem;
+        height: 6.5rem;
+    }
+    @include media-mobile {
+        width: 6rem;
+        height: 6rem;
+    }
+    @include media-mobile-small {
+        width: 5.8rem;
+        height: 5.8rem;
+    }    
+}
+
+.features-new__box-name {
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 135%;
+}

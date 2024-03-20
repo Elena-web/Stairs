@@ -1,0 +1,187 @@
+.header {
+    
+}
+
+.header__line {
+    @include media-laptop-big {
+        border-bottom: 1px solid $color-white;
+    }
+}
+
+.header__row {
+    display: flex;
+    padding: 1.5rem 0 1.8rem;
+    align-items: center;
+    border-bottom: 1px solid $color-white;
+    @include media-laptop-big {
+        border-bottom: none;
+    }
+    @include media-tabletbig {
+        justify-content: space-between;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    max-width: 35rem;
+    @include media-laptop-big {
+        max-width: 50%;
+    }
+    @include media-mobile {
+        max-width: 30%;
+    }
+}
+
+.logo figure {
+    width: 120%;
+    margin: 0;
+    padding-right: 1rem;
+    @include media-laptop-big {
+        max-width: 15rem;
+    }
+}
+
+.logo__company {
+    color: $color-white;    
+    @include font ($size: 1.2rem, $height: 1.5, $weight: 300, $style: normal);
+    border-left: 1px solid $color-white;
+    padding-left: 1rem;
+    @include media-laptop-big {
+        display: none;
+    }
+}
+
+.header__social,
+.footer__social {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 4rem;
+    li {
+        margin-right: 1.5rem;
+        &:last-child {
+            margin-right: 0;
+        }
+        @include media-laptop-big {
+            margin-right: 1rem;
+        }
+    }
+    @include media-laptop-big {
+        margin: 0;
+    }
+    @include media-tabletbig {
+        display: none;
+    }
+}
+
+.header__social a
+.footer__social a {
+    width: 3.8rem;
+    height: 3.8rem;
+}
+
+.social-icon {
+    width: 3.8rem;
+    height: 3.8rem;
+    border-radius: 50%;
+}
+
+.header__social li a:hover .social-icon,
+.footer__social li a:hover .social-icon {
+        outline: 2px solid rgba(249, 230, 11, 0.5);
+        transition: all .4s ease-in-out;
+}
+
+.header__contacts {
+    padding-left: 3%;
+    margin: 0 0 0 auto;
+    @include media-laptop-big {
+        padding: 0;
+    }
+    @include media-tabletbig {
+        margin-right: 3%;
+    }
+}
+
+.header__contacts em {
+    @include font ($size: 1.8rem, $height: 29px, $weight: 700, $style: normal);
+    margin-right: 10px;
+    color: $color-white;
+    @include media-laptop-big {
+        @include font ($size: 1.4rem, $height: 29px, $weight: 700, $style: normal);
+    }    
+}
+
+.header__contacts a {
+        display: flex;
+        align-items: center;
+        @include font ($size: 1.8rem, $height: 1.2, $weight: 600, $style: normal);
+        color: $color-white;
+        white-space: nowrap;        
+        &:hover {
+            transition: color 0.2s linear;
+            color: $color-add;
+        }
+        @include media-laptop-big {
+            @include font ($size: 1.8rem, $height: 1.4, $weight: 700, $style: normal);
+        }
+        @include media-tabletbig {
+            @include font ($size: 1.8rem, $height: 1.2, $weight: 600, $style: normal);
+        }
+        @include media-mobile {
+            @include font ($size: 1.6rem, $height: 1.2, $weight: 500, $style: normal);
+        }
+    }
+
+.header__contacts a:hover em {
+    transition: color 0.2s linear;
+    color: $color-add;
+}
+
+.header__time-work {
+    @include font ($size: 1.2rem, $height: 1.4, $weight: 400, $style: normal);    
+    margin-left: 3rem;
+    color: $color-white;
+    & span {
+        display: block;
+    }
+    @include media-laptop-big {
+        display: none;
+    }
+}
+
+.header__button {
+    max-width: 16.4rem;
+    @include font ($size: 1.6rem, $height: 1.2, $weight: 600, $style: normal);    
+    padding: 1.5rem;
+    margin-left: 2rem;
+    @include media-laptop-big {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+    @include media-laptop {
+        @include font ($size: 1.4rem, $height: 1.2, $weight: 600, $style: normal);    
+    }
+    @include media-tabletbig {
+        display: none;
+    }
+}
+
+.header__mob {
+    display: flex;
+    align-items: center;
+}
+
+.fixed {
+    background: #242424;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 50;
+    transition: all .1s linear;
+}
+
+.fixed .header__line {
+    border-bottom: none;
+}

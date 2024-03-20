@@ -1,0 +1,308 @@
+.sale {
+    background: url(../img/bg-sale.jpg)  center center no-repeat;
+    background-size: cover;
+}
+
+.sale__wrap {
+    padding: 3rem 0;
+}    
+
+.sale__content {
+    display: flex;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 9px 20px rgba(66,51,42,.1);
+    @include media-tabletbig {
+        display: block;
+        width: 70rem;
+        margin: 0 auto;
+    }
+    @include media-tablet {
+        width: 54rem;
+    }
+    @include media-mobile-big {
+        width: 100%;
+    }
+} 
+
+.sale__info {
+    flex: 1 1 auto;
+    padding: 3.1rem 6rem 1.8rem 7rem;
+    width: 100%;    
+    @include media-laptop-big {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    @include media-mobile {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+.sale__info-text {
+    padding-bottom: 1.3rem;
+}
+
+.sale__title {
+    text-align: left;
+    @include font ($size: 3.2rem, $height: 1.2, $weight: 700, $style: normal);
+    margin: 0 0 15px;
+    color: $color-txt;
+    @include media-tabletbig {
+        text-align: center;
+    }
+}
+
+.sale__title-sub-element {
+    display: inline-block;
+    color: #efb642;
+}
+
+.sale__text {
+    margin: 0 0 15px;
+    text-align: left;
+    color: $color-txt;
+    @include font ($size: 1.6rem, $height: 1.2, $weight: 400, $style: normal);
+}
+
+.sale__description {
+    position: relative;
+    background: #9bcf5a;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 1.3rem 19rem 1.3rem 1.3rem;
+    margin-bottom: 28px;
+    justify-content: flex-start;
+    @include media-tabletbig {
+        padding-right: 170px;
+    }
+    @include media-tablet {
+        padding-right: 150px;
+
+    }
+    @include media-mobile-big {
+        padding-right: 0;
+        padding: 13px;       
+        justify-content: center;
+    }    
+    @include media-mobile {
+        
+        justify-content: center;
+    }
+}
+
+.sale__description-icon-wrapper {
+    flex: 0 0 auto;
+    margin-right: 13px;
+    @include media-mobile-big {
+        padding-left: 10%;
+    }
+    @include media-mobile {
+        padding-left: 0;
+    }
+}
+
+.sale__description-icon {
+    width: 46px;
+    height: 58px;
+}
+
+.sale__description-text {
+    flex: 1 1 auto;
+    padding-bottom: 2px;
+}
+
+.sale__description-title {
+    @include font ($size: 2rem, $height: 1.35, $weight: 700, $style: normal);
+    margin: 0;
+    padding: 3px 0;
+    @include media-mobile-big {
+        text-align: center;
+        margin-left: -15%;
+    }
+    @include media-mobile {
+        margin-left: -5%;
+    }
+}
+
+.sale__description-info {
+    margin: 0;
+    padding: 3px 0;
+    color: #fff;
+    @include font ($size: 1.6rem, $height: 1.2, $weight: 400, $style: normal);
+    @include media-mobile-big {
+        text-align: center;
+        margin-left: -15%;
+    }
+    @include media-mobile {
+        margin-left: -5%;
+    }
+}
+
+.sale__value {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    @include font ($size: 8rem, $height: 1, $weight: 800, $style: normal);
+    color: #cde7ac;
+    @include media-tablet {
+        @include font ($size: 6rem, $height: 1, $weight: 800, $style: normal);
+    }
+    @include media-mobile-big {
+        display: none;
+    }    
+    @include media-mobile {
+        display: none;
+    }
+}
+
+
+// Forma
+
+.sale__form-bar {
+    width: 39.6%;
+    background: #f5ece4;
+    flex: 0 0 auto;
+    border-radius: 0 1rem 1rem 0;
+    padding: 4rem 8rem;
+    @include media-laptop-big {
+        width: 34rem;
+        padding: 4rem;
+    }
+    @include media-laptop {
+        width: 340px;
+        border-radius: 0 10px 10px 0;
+        padding: 4rem;
+    }
+    @include media-tabletbig {
+        border-radius: 0 0 10px 10px;
+        width: 100%;
+        padding: 43px 25px 23px;
+    }
+    @include media-mobile {
+        padding: 43px 15px 23px;
+    }
+}
+
+.sale__form-title {
+    @include font ($size: 2rem, $height: 1.2, $weight: 700, $style: normal);
+    text-align: center;    
+    margin: 0 0 23px;
+    color: $color-txt;
+}
+
+.sale__form-content {
+    padding-bottom: 1.3rem;
+    display: block;    
+    margin: 0;
+    @include media-tabletbig {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -6px;
+        align-items: center;
+    }
+}
+
+.sale__form-field {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 10px;
+    padding: 0 6px;
+    @include media-tabletbig {
+        width: 33.3%;        
+    }
+    @include media-tablet {
+        width: 100%;
+    }
+}
+
+.field__content {
+    position: relative;
+}
+
+.field__icon-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 4;
+    width: 45px;
+    height: 45px;
+}
+
+.field__icon {
+    width: 2rem;
+    height: 2.2rem;    
+    position: absolute;
+    top: 52.5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.field__icon.phone {
+    width: 1.2rem;
+    height: 2.2rem;
+}
+.field__input {
+    height: 5rem;
+    height: 5rem;
+    border-radius: 25px;
+    border: 1px solid #fff;
+    background: #fff;
+    outline: 0;
+    padding: 0 20px 2px;
+    @include font ($size: 1.6rem, $height: 1.4, $weight: 400, $style: normal);    
+    color: #42332a;
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    @include media-tabletbig {
+        @include font ($size: 1.4rem, $height: 1.4, $weight: 400, $style: normal);    
+    }
+}
+.field__icon-wrapper+.field__input {
+    padding-left: 45px;
+}
+
+.sale__form-button-container {
+    padding: 10px 0 0;
+    width: 100%;
+    margin-bottom: 10px;
+    @include media-tabletbig {        
+        width: 33.3333333333%;
+        padding: 0 6px;
+    }
+    @include media-tablet {
+        width: 100%;
+    }
+}
+
+.btn.sale__form-button {
+    width: 100%;
+    @include font ($size: 1.4rem, $height: 1.35, $weight: 600, $style: normal);
+    height: auto;
+    padding: 15px 15px 17px;
+    @include media-tabletbig {
+        padding: 0 15px 2px;
+        height: 50px;
+    }
+}
+
+.form-comment.small {
+    color: #7d7d7d;
+    padding: 0;
+    font-size: 12px;
+    text-align: left;
+    @include media-mobile-small {
+        font-size: 10px;
+    }   padding: 6px; 
+}
+
+.nofollow {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #42332a;
+    outline: 0;
+}

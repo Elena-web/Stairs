@@ -1,0 +1,186 @@
+.modal-icon {
+    display: none;
+    width: 4.5rem;
+    height: 3.5rem;
+	justify-content: center;
+	align-items: center;    
+    border-radius: 0.5rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0, #ffc64c 100%), #ffdc56;
+    cursor: pointer;
+    padding-top: .7rem;
+    z-index: 150;    
+    @include media-laptop-big {
+        display: flex;
+        padding-top: 0;  
+    }
+    @include media-mobile {
+        width: 3rem;
+        height: 2.5rem;
+    }
+}
+
+.modal-icon__middle {
+    position: relative;
+    background-color: $color-add;
+    border-radius: 25rem;
+    width: 3rem;
+    height: 0.2rem;
+    background-color: $color-txt;
+    @include media-mobile {
+        width: 1.6rem;
+    }
+    &::before{
+        content: "";
+        position: absolute; 
+        left: 0;
+        border-radius: 25rem;
+        width: 2rem;
+        height: 0.2rem;
+        transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+        background-color: $color-txt;
+        top: .8rem;
+        @include media-mobile {
+            width: 1.6rem;
+            top: .6rem;
+        }
+    }
+    &::after{
+        content: "";
+        position: absolute; 
+        left: 0;
+        border-radius: 25rem;
+        width: 3rem;
+        height: 0.2rem;
+        transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+        background-color: $color-txt;
+        top: -0.8rem;
+        @include media-mobile {
+            width: 1.8rem;
+            top: -0.6rem;
+        }
+    }
+}
+
+.modal-icon .modal-icon--active {
+    position: fixed;
+    top: 2.3rem;
+    right: 5rem;    
+    @include media-mobile {
+        top: 2.8rem;
+        right: 1.6rem;
+    }
+}
+
+.modal-icon.modal-icon--active .modal-icon__middle {
+    background-color: transparent;
+    color: $color-txt;
+    &::before{
+        top: 0;
+        transform: rotate(45deg);
+        transition: bottom 0.2s linear, transform 0.2s ease-in 0.2s;
+        background-color: $color-txt;
+        width: 2.8rem;
+        @include media-mobile {
+            width: 2rem;
+        }
+    }
+    &::after{
+        top: 0;
+        right: 0;
+        transition: bottom 0.2s linear, transform 0.2s ease-in 0.2s;
+        background-color: $color-txt;
+        transform: rotate(-45deg);
+    }
+}
+
+.modal {
+        padding: 1.5rem 0 0 3.5rem;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 40%;
+        height: 100%;
+        background-color: $color-white;
+        transform: translateX(100%);
+        opacity: 0;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        transition: .9s ease-in-out;
+        @include media-tabletbig {
+            width: 50%;
+            padding: .7rem 0 0 2.5rem;
+        }
+        @include media-tablet {
+            width: 60%;
+        }
+        @include media-mobile {
+            width: 100%;
+        }
+}
+
+.modal.modal--active {
+    @include media-laptop-big {
+        opacity: 1;
+        transform: translateX(0);
+        transition: all 0.7s ease-in, opacity 0s;
+    }
+}
+
+.modal__top .header__button{
+   margin: .3rem 0 0 0;
+   @include media-tabletbig {
+    display: block;
+    }
+}
+
+.menu_phone {
+    display: block;
+    width: 80%;
+    border-top: 1px solid $color-txt;
+    border-bottom: 1px solid $color-txt;
+    padding: 1.5rem 0 1.5rem 1rem;
+    color: $color-txt;
+    @include font ($size: 2rem, $height: 2, $weight: 600, $style: normal);
+    &:hover {
+        color: $color-add;
+    }
+    & em {
+        margin-right: 1rem;
+    }
+}
+
+.modal__btn {
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    color: $color-txt;
+    text-decoration: none;    
+    @include font ($size: 3.2rem, $height: 2.5, $weight: 600, $style: normal);
+}
+
+.modal .menu {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 2rem;
+}
+
+.modal .menu a {
+    color: $color-txt;
+    @include font ($size: 2rem, $height: 2, $weight: 600, $style: normal);     
+    &:hover {
+        color: $color-add;
+    }
+}
+
+.modal .header__social {
+    padding: 1.5rem 0;
+    @include media-tabletbig {
+        display: flex;
+    }
+}
+
